@@ -149,8 +149,8 @@ This section summarizes for each provided graph algorithm in the library its inp
 | DFS            | unweighted DG and starting node                | path nodes                  | DFS in queue                                                                                                                | O(V + E)       |
 | Dijkstra's     | DG with non-negative weights and starting node | path nodes                  | [dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming#Dijkstra's_algorithm_for_the_shortest_path_problem) | O(V²)          |
 | in DAG         | weighted DAG and starting node                 | path nodes                  | based on topological sorting                                                                                                | O(V + E)       |
-| Bellman-Ford   | weighted DG and starting node                  | path nodes                  | edge [relaxation](https://en.wikipedia.org/wiki/Relaxation_(iterative_method))                                              | O(V \* E)      |
-| Floyd-Warshall | DG with no negative weight cycles              | path for every node pair    | data structure: two matrices                                                                                                | O(V³)          |
+| Bellman-Ford   | weighted DG and starting node                  | path nodes                  | edge [relaxation](https://en.wikipedia.org/wiki/Relaxation_(iterative_method)); detects negative cycles                     | O(V \* E)      |
+| Floyd-Warshall | weighted DG                                    | path for every node pair    | - data structure: two matrices; detects negative cycles                                                                     | O(V³)          |
 | A*             | DG, start and end node                         | path from start to end node | Extension of Dijkstra's algorithm                                                                                           | O(E \* log(V)) |
 
 ### Strongly connected components
@@ -162,10 +162,10 @@ This section summarizes for each provided graph algorithm in the library its inp
 
 ### Maximum flow
 
-| Algorithm    | Input                              | Output             | Remark           | Complexity |
-| ------------ | ---------------------------------- | ------------------ | ---------------- | ---------- |
-| Edmonds-Karp | weighted DG, source and sink nodes | maximal flow value | uses BFS         | O(V * E²)  |
-| Dinic's      | weighted DG, source and sink nodes | maximal flow value | layering concept | O(V² \* E) |
+| Algorithm    | Input                                  | Output             | Remark           | Complexity |
+| ------------ | -------------------------------------- | ------------------ | ---------------- | ---------- |
+| Edmonds-Karp | weighted DG, source node and sink node | maximal flow value | uses BFS         | O(V * E²)  |
+| Dinic's      | weighted DG, source node and sink node | maximal flow value | layering concept | O(V² \* E) |
 
 ### Link analysis
 
@@ -191,19 +191,19 @@ Both algorithms are  [greedy](https://en.wikipedia.org/wiki/Greedy_algorithm).
 
 ## External links
 
-Almost all items are well described in Wikipedia. For a couple of items, the brief posts in [Jiho's Blog](https://berryjune07.github.io/computer-science) are outstanding.
+Almost all items are well described in Wikipedia. For a couple of items, the posts in [w3schools](https://www.w3schools.com), [Research Scientist Pod](https://researchdatapod.com) and [Jiho's Blog](https://berryjune07.github.io/computer-science) are outstanding.
 
 ### Graph problems
 
 - Topological sorting: [Wikipedia](https://en.wikipedia.org/wiki/Topological_sorting)
 
-- Shortest path: [Wikipedia](https://en.wikipedia.org/wiki/Shortest_path_problem)
+- Shortest path: [Wikipedia](https://en.wikipedia.org/wiki/Shortest_path_problem), [comparison between algorithms]([Comparison between Shortest Path Algorithms: - GeeksforGeeks](https://www.geeksforgeeks.org/dsa/comparison-between-shortest-path-algorithms/))
 
 - Minimum spanning tree: [Wikipedia](https://en.wikipedia.org/wiki/Minimum_spanning_tree), [Jiho's Blog](https://berryjune07.github.io/computer-science/minimum-spanning-tree.html), [Prim's vs Kruskal's (Geeks for geeks)](https://www.geeksforgeeks.org/dsa/difference-between-prims-and-kruskals-algorithm-for-mst), [Prim's vs Kruskal's (Baeldung)](https://www.baeldung.com/cs/kruskals-vs-prims-algorithm)
 
 - Strongly connected components: [Wikipedia](https://en.wikipedia.org/wiki/Strongly_connected_component)
 
-- Maximum flow: [Wikipedia](https://en.wikipedia.org/wiki/Maximum_flow_problem), [Edmond-Karp vs Dinic's](https://blog.truegeometry.com/api/exploreHTML/4a9efcd40aefb604cbe4a9ad70982c12.exploreHTML)
+- Maximum flow: [Wikipedia](https://en.wikipedia.org/wiki/Maximum_flow_problem)
 
 - Link analysis: [Wikipedia](https://en.wikipedia.org/wiki/Link_analysis)
 
@@ -211,21 +211,21 @@ Almost all items are well described in Wikipedia. For a couple of items, the bri
 
 ### Graph algorithms
 
-- A*: [Wikipedia](https://en.wikipedia.org/wiki/A*_search_algorithm)
+- A*: [Wikipedia](https://en.wikipedia.org/wiki/A*_search_algorithm), [Reserch Scientist Pod]([A* Algorithm: A Comprehensive Guide - The Research Scientist Pod](https://researchdatapod.com/a-star-algorithm/))
 
-- Bellman-Ford: [Wikipedia](https://en.wikipedia.org/wiki/Bellman–Ford_algorithm), [Jiho's Blog](https://berryjune07.github.io/computer-science/bellman-ford-algorithm.html)
+- Bellman-Ford: [Wikipedia](https://en.wikipedia.org/wiki/Bellman–Ford_algorithm), [w3schools]([DSA Bellman-Ford Algorithm](https://www.w3schools.com/dsa/dsa_algo_graphs_bellmanford.php)), [Research Scientist Pod]([Bellman–Ford Algorithm - The Research Scientist Pod](https://researchdatapod.com/bellman-ford-algorithm/)), [Jiho's Blog](https://berryjune07.github.io/computer-science/bellman-ford-algorithm.html)
 
-- BFS: [Wikipedia](https://en.wikipedia.org/wiki/Breadth-first_search), [Jiho's Blog](https://berryjune07.github.io/computer-science/dfs-and-bfs.html#bfs)
+- BFS vs. DFS: [Wikipedia (BFS)](https://en.wikipedia.org/wiki/Breadth-first_search), [Wikipedia (DFS)](https://en.wikipedia.org/wiki/Depth-first_search), [wscubetech](https://www.wscubetech.com/resources/dsa/dfs-vs-bfs), [Baeldung](https://www.baeldung.com/cs/dfs-vs-bfs),  [Jiho's Blog](https://berryjune07.github.io/computer-science/dfs-and-bfs.html), [IntelliPaat](https://intellipaat.com/blog/difference-between-bfs-and-dfs/), [codecademy](https://www.codecademy.com/article/bfs-vs-dfs) 
 
-- DFS: [Wikipedia](https://en.wikipedia.org/wiki/Depth-first_search), [Jiho's Blog](https://berryjune07.github.io/computer-science/dfs-and-bfs.html#dfs)
+- 
 
-- Dijkstra's: [Wikipedia](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
+- Dijkstra's: [Wikipedia](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm), [w3schools]([DSA Dijkstra's Algorithm](https://www.w3schools.com/dsa/dsa_algo_graphs_dijkstra.php)), [Research Scientist Pod]([Dijkstra&#039;s Algorithm - The Research Scientist Pod](https://researchdatapod.com/dijkstras-algorithm/))
 
 - Dinic's: [Wikipedia](https://en.wikipedia.org/wiki/Dinic%27s_algorithm), [Geeks for geeks](https://www.geeksforgeeks.org/dsa/dinics-algorithm-maximum-flow)
 
 - Edmonds-Karp: [Wikipedia](https://en.wikipedia.org/wiki/Edmonds–Karp_algorithm)
 
-- Floyd-Warshall: [Wikipedia](https://en.wikipedia.org/wiki/Floyd–Warshall_algorithm), [Jiho's Blog](https://berryjune07.github.io/computer-science/floyd-warshall-algorithm.html)
+- Floyd-Warshall: [Wikipedia](https://en.wikipedia.org/wiki/Floyd–Warshall_algorithm), [Research Scientist Pod](https://researchdatapod.com/floyd-warshall-algorithm/), [Jiho's Blog](https://berryjune07.github.io/computer-science/floyd-warshall-algorithm.html)
 
 - Gale-Shapely: [Wikipedia](https://de.wikipedia.org/wiki/Stable_Marriage_Problem#Gale-Shapley-Algorithmus)
 
