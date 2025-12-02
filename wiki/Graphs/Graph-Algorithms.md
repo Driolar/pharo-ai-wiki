@@ -217,7 +217,7 @@ Almost all items are well described in Wikipedia. For a couple of items, the pos
 
 - BFS vs. DFS: [Wikipedia (BFS)](https://en.wikipedia.org/wiki/Breadth-first_search), [Wikipedia (DFS)](https://en.wikipedia.org/wiki/Depth-first_search), [wscubetech](https://www.wscubetech.com/resources/dsa/dfs-vs-bfs), [Baeldung](https://www.baeldung.com/cs/dfs-vs-bfs),  [Jiho's Blog](https://berryjune07.github.io/computer-science/dfs-and-bfs.html), [IntelliPaat](https://intellipaat.com/blog/difference-between-bfs-and-dfs/), [codecademy](https://www.codecademy.com/article/bfs-vs-dfs) 
 
-- Dijkstra's: [Wikipedia](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm), [w3schools]([DSA Dijkstra's Algorithm](https://www.w3schools.com/dsa/dsa_algo_graphs_dijkstra.php)), [Research Scientist Pod](https://researchdatapod.com/dijkstras-algorithm/)
+- Dijkstra's: [Wikipedia](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm), [w3schools](https://www.w3schools.com/dsa/dsa_algo_graphs_dijkstra.php), [Research Scientist Pod](https://researchdatapod.com/dijkstras-algorithm/)
 
 - Dinic's: [Wikipedia](https://en.wikipedia.org/wiki/Dinic%27s_algorithm), [Geeks for geeks](https://www.geeksforgeeks.org/dsa/dinics-algorithm-maximum-flow)
 
