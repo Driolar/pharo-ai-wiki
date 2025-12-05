@@ -143,21 +143,21 @@ This section summarizes for each provided graph algorithm in the library its inp
 
 ### Shortest path
 
-| Algorithm      | Input                                          | Output                      | Remark                                                                                                                      | Complexity     |
-| -------------- | ---------------------------------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------- | -------------- |
-| BFS            | unweighted DG and starting node                | path nodes                  | BFS in queue                                                                                                                | O(V + E)       |
-| DFS            | unweighted DG and starting node                | path nodes                  | DFS in queue                                                                                                                | O(V + E)       |
-| Dijkstra's     | DG with non-negative weights and starting node | path nodes                  | [dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming#Dijkstra's_algorithm_for_the_shortest_path_problem) | O(V²)          |
-| in DAG         | weighted DAG and starting node                 | path nodes                  | based on topological sorting                                                                                                | O(V + E)       |
-| Bellman-Ford   | weighted DG and starting node                  | path nodes                  | edge [relaxation](https://en.wikipedia.org/wiki/Relaxation_(iterative_method)); detects negative cycles                     | O(V \* E)      |
-| Floyd-Warshall | weighted DG                                    | path for every node pair    | data structure: two matrices; detects negative cycles                                                                       | O(V³)          |
-| A*             | DG, start and end node                         | path from start to end node | Extension of Dijkstra's algorithm                                                                                           | O(E \* log(V)) |
+| Algorithm      | Input                                               | Output                      | Remark                                                                                                                      | Complexity     |
+| -------------- | --------------------------------------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| BFS            | unweighted graph and starting node                  | path nodes                  | BFS in queue                                                                                                                | O(V + E)       |
+| DFS            | unweighted graph and starting node                  | path nodes                  | DFS in queue                                                                                                                | O(V + E)       |
+| Dijkstra's     | graph with non-negative weights and starting node   | path nodes                  | [dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming#Dijkstra's_algorithm_for_the_shortest_path_problem) | O(V²)          |
+| in DAG         | weighted DAG and starting node                      | path nodes                  | based on topological sorting                                                                                                | O(V + E)       |
+| Bellman-Ford   | weighted graph and starting node                    | path nodes                  | edge [relaxation](https://en.wikipedia.org/wiki/Relaxation_(iterative_method)); detects negative cycles                     | O(V \* E)      |
+| Floyd-Warshall | weighted graph                                      | path for every node pair    | data structure: two matrices; detects negative cycles                                                                       | O(V³)          |
+| A*             | graph with non-negative weights, start and end node | path from start to end node | Extension of Dijkstra's algorithm                                                                                           | O(E \* log(V)) |
 
 ### Strongly connected components
 
 | Algorithm     | Input                     | Output                         | Remark                          | Complexity |
 | ------------- | ------------------------- | ------------------------------ | ------------------------------- | ---------- |
-| Tarjan's      | Unweighted DG             | list of node lists             | based on DFS                    | O(V + E)   |
+| Tarjan's      | unweighted graph          | list of node lists             | based on DFS                    | O(V + E)   |
 | Graph Reducer | Tarjan's algorithm output | nodes of the new reduced graph | no default reduction of weights | ?          |
 
 ### Maximum flow
