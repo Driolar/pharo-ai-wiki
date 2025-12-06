@@ -241,4 +241,4 @@ Almost all items are well described in Wikipedia. For a couple of items, the pos
 
 - Prim's: [Wikipedia](https://en.wikipedia.org/wiki/Prim%27s_algorithm)
 
-- Tarjan's: [Wikipedia](https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm)
+- Tarjan's: [Wikipedia](https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm), [dev.to](https://dev.to/muhammad_taaha_90438c47f1/understanding-tarjans-algorithm-with-visual-examples-5hb8)
