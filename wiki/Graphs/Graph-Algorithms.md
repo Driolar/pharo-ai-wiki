@@ -188,7 +188,7 @@ Both algorithms are  [greedy](https://en.wikipedia.org/wiki/Greedy_algorithm).
 | Problem                      | Algorithm      | Input                                                       | Output                                           | Remark                              | Complexity      |
 | ---------------------------- | -------------- | ----------------------------------------------------------- | ------------------------------------------------ | ----------------------------------- | --------------- |
 | Maximum Matching             | Graph Matching | undirected weighted graph                                   | independent edges set                            | greedy approximation                | O(E \* log(V))  |
-| Maximum-Cardinality Matching | Hopcroft-Karp  | unweighted bipartite graph                                  | matching edges                                   | specialization of Dinic's algorithm | O(E \* sqrt(V)) |
+| Maximum-Cardinality Matching | Hopcroft-Karp  | unweighted bipartite graph                                  | independent edges set                            | specialization of Dinic's algorithm | O(E \* sqrt(V)) |
 | Stable Matching              | Gale-Shapely's | nodes in group A or B with preferences over the other group | set of edges, each one relating a different pair | groups A and B are of equal size n  | O(n²)           |
 
 ## External links
