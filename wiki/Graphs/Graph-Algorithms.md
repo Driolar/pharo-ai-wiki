@@ -43,6 +43,7 @@ Currently, we have these algorithms implemented:
 - Matching (Independent Edge Set)
   + Maximum-weight Matching Approximation Algorithm 
     (with variations for minimum-weight and maximum-cardinality)
+  + Hopcroft-Carp Algorithm
   + Gale-Shapely Stable Matching Algorithm (for the so-called marriage problem)
 
 ## How to use the graph algorithms - API
@@ -184,10 +185,11 @@ Both algorithms are  [greedy](https://en.wikipedia.org/wiki/Greedy_algorithm).
 
 ### Matching
 
-| Problem          | Algorithm      | Input                                                       | Output                                           | Remark                             | Complexity     |
-| ---------------- | -------------- | ----------------------------------------------------------- | ------------------------------------------------ | ---------------------------------- | -------------- |
-| Maximum Matching | Graph Matching | undirected weighted graph                                   | independent edges set                            | greedy approximation               | O(E \* log(V)) |
-| Stable Matching  | Gale-Shapely's | nodes in group A or B with preferences over the other group | set of edges, each one relating a different pair | groups A and B are of equal size n | O(n²)          |
+| Problem                      | Algorithm      | Input                                                       | Output                                           | Remark                              | Complexity      |
+| ---------------------------- | -------------- | ----------------------------------------------------------- | ------------------------------------------------ | ----------------------------------- | --------------- |
+| Maximum Matching             | Graph Matching | undirected weighted graph                                   | independent edges set                            | greedy approximation                | O(E \* log(V))  |
+| Maximum-Cardinality Matching | Hopcroft-Carp  | unweighted bipartite graph                                  | matching edges                                   | specialization of Dinic's algorithm | O(E \* sqrt(V)) |
+| Stable Matching              | Gale-Shapely's | nodes in group A or B with preferences over the other group | set of edges, each one relating a different pair | groups A and B are of equal size n  | O(n²)           |
 
 ## External links
 
@@ -228,6 +230,8 @@ Almost all items are well described in Wikipedia. For a couple of items, the pos
 - Gale-Shapely: [Wikipedia](https://de.wikipedia.org/wiki/Stable_Marriage_Problem#Gale-Shapley-Algorithmus)
 
 - HITS: [Wikipedia](https://en.wikipedia.org/wiki/HITS_algorithm)
+
+- Hopcroft-Karp: [Wikipedia](https://en.wikipedia.org/wiki/Hopcroft–Karp_algorithm), [Tutorialspoint](https://www.tutorialspoint.com/graph_theory/graph_theory_hopcroft_karp_algorithm.htm), [Brilliant](https://brilliant.org/wiki/hopcroft-karp/)
 
 - Kahn's: [Wikipedia](https://en.wikipedia.org/wiki/Topological_sorting#Kahn's_algorithm)
 
